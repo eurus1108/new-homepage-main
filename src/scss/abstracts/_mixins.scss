@@ -1,0 +1,32 @@
+@use "sass:map";
+@use "./breakpoints" as *;
+
+@mixin mq($width, $type: min) {
+  @if map.has-key($breakpoints, $width) {
+    $width: map.get($breakpoints, $width);
+
+    @if $type == max {
+      $width: calc($width - 1px);
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  } @else {
+    @error "#{$width} doesn't exist";
+  }
+}
+
+@mixin psuedo($content: "", $position: absolute, $display: block) {
+  content: $content;
+  position: $position;
+  display: $display;
+}
+
+@mixin letter-spacing($val) {
+  letter-spacing: $val / 100 * 1em;
+}
+
+@mixin line-height($val) {
+  line-height: $val / 16 * 1rem;
+}
