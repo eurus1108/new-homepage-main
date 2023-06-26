@@ -24,6 +24,11 @@
   border: none;
   outline: none;
   cursor: pointer;
+  z-index: 9999;
+
+  @include mq(medium) {
+    display: none;
+  }
 
   span {
     position: relative;
