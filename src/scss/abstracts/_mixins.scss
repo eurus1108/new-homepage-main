@@ -24,9 +24,9 @@
 }
 
 @mixin letter-spacing($val) {
-  letter-spacing: $val / 100 * 1em;
+  letter-spacing: calc($val / 100 * 1em);
 }
 
 @mixin line-height($val) {
-  line-height: $val / 16 * 1rem;
+  line-height: calc($val / 16 * 1rem);
 }
