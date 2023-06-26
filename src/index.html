@@ -3,14 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+    <link rel="icon" type="svg" sizes="45x27" href="./assets/images/logo.svg" />
     <link rel="stylesheet" href="./style.min.css" />
-    <title>Frontend Mentor | News homepage</title>
+    <title>Frontend Mentor - News homepage</title>
+    <script src="./main.js" defer></script>
     <style>
       .attribution {
         font-size: 11px;
@@ -21,5 +17,56 @@
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <main class="h-wrapper">
+      <header class="header">
+        <nav class="header__nav">
+          <div class="header__menu-item header__menu-item--logo">
+            <img src="./assets/images/logo.svg" alt="" class="header__logo" />
+          </div>
+          <ul class="header__menu-item header__menu-item--nav">
+            <li class="header-menu">
+              <a href="#" class="header-nav-link">Home</a>
+            </li>
+            <li class="header-menu">
+              <a href="#" class="header-nav-link">New</a>
+            </li>
+            <li class="header-menu">
+              <a href="#" class="header-nav-link">Popular</a>
+            </li>
+            <li class="header-menu">
+              <a href="#" class="header-nav-link">Trending</a>
+            </li>
+            <li class="header-menu">
+              <a href="#" class="header-nav-link">Categories</a>
+            </li>
+          </ul>
+          <div class="header__menu-item header__menu-item--button">
+            <button class="hamburger">
+              <span></span>
+            </button>
+            <div class="modal">
+              <ul class="modal__mobile-container">
+                <li class="header-menu">
+                  <a href="#" class="new-section-link">Home</a>
+                </li>
+                <li class="header-menu">
+                  <a href="#" class="new-section-link">New</a>
+                </li>
+                <li class="header-menu">
+                  <a href="#" class="new-section-link">Popular</a>
+                </li>
+                <li class="header-menu">
+                  <a href="#" class="new-section-link">Trending</a>
+                </li>
+                <li class="header-menu">
+                  <a href="#" class="new-section-link">Categories</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </main>
+  </body>
 </html>
