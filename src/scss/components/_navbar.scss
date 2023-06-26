@@ -1,0 +1,62 @@
+@use "../abstracts/" as *;
+
+.header {
+  padding-block: 1.75rem;
+
+  @include mq(large) {
+    padding-top: 5.5625rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 2.875rem;
+
+      @include mq(large) {
+        width: 4.0625rem;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+    &--nav {
+      @include mq(medium, max) {
+        display: none;
+      }
+
+      .header-menu:not(:last-child) {
+        margin-right: 2.375rem;
+      }
+
+      .header-nav-link {
+        @include letter-spacing(5);
+        transition: color 200ms ease-in-out;
+
+        &:nth-child(3),
+        &:last-child {
+          @include letter-spacing(4);
+        }
+
+        &:hover {
+          color: clr(primary, soft-red);
+        }
+      }
+    }
+
+    &--button {
+      @include mq(medium) {
+        display: none;
+      }
+    }
+  }
+}
