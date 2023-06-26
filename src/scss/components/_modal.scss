@@ -1,0 +1,49 @@
+@use "../abstracts/" as *;
+
+.modal {
+  position: absolute;
+  display: block;
+  inset: 0;
+  height: 100vh;
+  background-color: transparent;
+  transition: background-color 550ms ease-in-out;
+  overflow: hidden;
+
+  @include mq(medium) {
+    display: none;
+  }
+
+  &__mobile-container {
+    position: absolute;
+    top: 0;
+    right: -70%;
+    padding: 9.0625rem 1.5rem;
+    width: 16rem;
+    height: 100%;
+    color: clr(neutral, very-dark-blue);
+    background-color: clr(neutral, off-white);
+    transition: right 400ms ease-in-out;
+
+    .header-menu:not(:last-child) {
+      margin-bottom: 1.625rem;
+    }
+
+    .new-section-link {
+      font-size: fs(medium);
+      @include line-height(22);
+      transition: 200ms ease-in-out;
+
+      &:hover {
+        color: clr(primary, soft-red);
+      }
+    }
+  }
+
+  &.modal--active {
+    background-color: rgba(clr(neutral, very-dark-blue), 0.5);
+
+    .modal__mobile-container {
+      right: 0;
+    }
+  }
+}
