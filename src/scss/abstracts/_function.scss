@@ -6,7 +6,7 @@
   @if map.has-key($colors, $color, $shade) {
     @return map.get($colors, $color, $shade);
   } @else {
-    @error "$colors doesn't have `#{$shade}`";
+    @error "#{$shade} doesn't exist in #{$color}";
   }
 }
 
