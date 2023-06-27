@@ -1,2 +1,16 @@
+@use "./abstracts/" as *;
 @use "./base/" as *;
 @use "./components/" as *;
+
+.feature-panel {
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem;
+  }
+
+  @include mq(large) {
+    margin-top: 1.6875rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
