@@ -1,0 +1,52 @@
+@use "../abstracts/" as *;
+
+.card-container {
+  display: grid;
+  gap: 1.875rem;
+  margin-block-end: 5rem;
+
+  @include mq(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-block: 4.5rem 8.0625rem;
+  }
+
+  @include mq(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-component-list {
+    display: flex;
+    max-width: 21.875rem;
+
+    .text-container {
+      margin-left: 1.5rem;
+
+      .number {
+        margin-bottom: 0.9375rem;
+        font-size: fs(xlarge);
+        font-weight: $fw-bold;
+        @include line-height(30);
+        color: clr(neutral, grayish-blue);
+      }
+
+      h4 {
+        margin-bottom: 0.625rem;
+        font-size: fs(medium);
+        font-weight: $fw-bold;
+        @include letter-spacing(1);
+        color: clr(neutral, very-dark-blue);
+      }
+
+      p {
+        @include letter-spacing(0.2);
+        @include line-height(26);
+      }
+    }
+
+    .card-img-container {
+      img {
+        width: 6.25rem;
+      }
+    }
+  }
+}
