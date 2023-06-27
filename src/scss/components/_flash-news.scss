@@ -14,15 +14,24 @@
   }
 
   &__container {
-    @include mq(large, max) {
+    @include mq(large) {
       padding-block: 1.3125rem;
     }
 
+    @include mq(large, max) {
+      margin-left: 1px;
+    }
+
     h2 {
-      padding-block: 1.75rem;
-      font-size: fs(2xlarge);
+      padding-block: 1.3125rem;
+      font-size: fs(xlarge);
       font-weight: $fw-xbold;
       color: clr(primary, soft-orange);
+
+      @include mq(large) {
+        padding-block: 1.75rem;
+        font-size: fs(2xlarge);
+      }
     }
 
     .sub-content-container {

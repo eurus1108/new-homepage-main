@@ -18,23 +18,22 @@
         & > :is(h1, .division) {
           flex: 1;
         }
-
-        // h1 span:last-child {
-        //   @include letter-spacing(2);
-        // }
       }
     }
 
     h1 {
       padding-right: calc(2rem - 2px);
-      padding-top: 4px;
       font-size: fs(3xlarge);
       font-weight: $fw-xbold;
       @include line-height(56);
       color: clr(neutral, very-dark-blue);
 
+      @include mq(large) {
+        padding-top: 4px;
+      }
+
       @include mq(large, max) {
-        margin-block: 1rem 1.5rem;
+        margin-block: 1.5rem 1rem;
         padding-right: 2rem;
         font-size: fs(2xlarge);
         word-wrap: break-word;
