@@ -14,10 +14,6 @@
   }
 
   &__container {
-    @include mq(large) {
-      padding-block: 1.3125rem;
-    }
-
     @include mq(large, max) {
       margin-left: 1px;
     }
