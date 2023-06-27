@@ -2,12 +2,12 @@
 
 .modal {
   position: absolute;
-  display: block;
   inset: 0;
-  height: 100vh;
+  height: 125vh;
   background-color: transparent;
   transition: background-color 550ms ease-in-out;
   overflow: hidden;
+  pointer-events: none;
 
   @include mq(medium) {
     display: none;
@@ -41,6 +41,7 @@
 
   &.modal--active {
     background-color: rgba(clr(neutral, very-dark-blue), 0.5);
+    pointer-events: all;
 
     .modal__mobile-container {
       right: 0;
