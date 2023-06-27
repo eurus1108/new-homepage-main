@@ -1,0 +1,74 @@
+@use "../abstracts/" as *;
+
+.flash-news {
+  width: 100%;
+  padding-inline: 1.25rem;
+  background-color: clr(neutral, very-dark-blue);
+
+  @include mq(medium, max) {
+    margin-block: 4rem;
+  }
+
+  @include mq(large) {
+    padding-inline: 1.5rem;
+  }
+
+  &__container {
+    @include mq(large, max) {
+      padding-block: 1.3125rem;
+    }
+
+    h2 {
+      padding-block: 1.75rem;
+      font-size: fs(2xlarge);
+      font-weight: $fw-xbold;
+      color: clr(primary, soft-orange);
+    }
+
+    .sub-content-container {
+      padding-block: 0.625rem 1.5rem;
+
+      @include mq(large) {
+        padding-block: 1px;
+      }
+    }
+
+    .sub-content {
+      display: block;
+      margin-bottom: 1.875rem;
+
+      &:not(:last-child) {
+        padding-bottom: 1.875rem;
+        border-bottom: 1px solid clr(neutral, dark-grayish-blue);
+      }
+
+      @include mq(large, max) {
+        &:last-child {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .sub-content-link {
+        &:hover h3 {
+          color: clr(primary, soft-orange);
+        }
+      }
+
+      h3 {
+        margin-bottom: 0.5rem;
+        font-size: fs(large);
+        font-weight: $fw-bold;
+        @include letter-spacing(0.5);
+        color: clr(neutral, off-white);
+        transition: 300ms ease-in-out;
+      }
+
+      p {
+        @include line-height(26);
+        @include letter-spacing(0.2);
+        color: clr(neutral, grayish-blue);
+      }
+    }
+  }
+}
