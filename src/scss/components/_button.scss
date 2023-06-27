@@ -12,6 +12,11 @@
   text-decoration: none;
   color: clr(neutral, off-white);
   background-color: clr(primary, soft-red);
+  transition: background-color 200ms ease-in-out;
+
+  &:hover {
+    background-color: clr(neutral, very-dark-blue);
+  }
 
   span {
     padding-right: 4px;
