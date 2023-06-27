@@ -7,3 +7,9 @@ hamburger.addEventListener("click", () => {
   modalMenu.classList.toggle("modal--active");
   body.classList.toggle("no-scroll");
 });
+
+const modalLink = document.querySelectorAll(".new-section-link");
+
+modalLink.forEach((link) => {
+  link.setAttribute("tabindex", "-1");
+});
