@@ -55,7 +55,9 @@
       }
 
       .sub-content-link {
-        &:hover h3 {
+        transition: 300ms ease-in-out;
+
+        &:hover {
           color: clr(primary, soft-orange);
         }
       }
@@ -66,7 +68,6 @@
         font-weight: $fw-bold;
         @include letter-spacing(0.5);
         color: clr(neutral, off-white);
-        transition: 300ms ease-in-out;
       }
 
       p {

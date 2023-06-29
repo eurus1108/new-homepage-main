@@ -1,9 +1,13 @@
 @use "../abstracts/" as *;
 
 .modal {
-  position: absolute;
-  inset: 0;
-  height: 125vh;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
   background-color: transparent;
   transition: background-color 550ms ease-in-out;
   overflow: hidden;
@@ -16,7 +20,7 @@
   &__mobile-container {
     position: absolute;
     top: 0;
-    right: -70%;
+    right: -100%;
     padding: 9.0625rem 1.5rem;
     width: 16rem;
     height: 100%;

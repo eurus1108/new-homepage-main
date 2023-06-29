@@ -30,12 +30,10 @@
       }
     }
     &--nav {
+      gap: 2.375rem;
+
       @include mq(medium, max) {
         display: none;
-      }
-
-      .header-menu:not(:last-child) {
-        margin-right: 2.375rem;
       }
 
       .header-nav-link {

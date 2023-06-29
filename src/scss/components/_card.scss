@@ -29,12 +29,20 @@
         color: clr(neutral, grayish-blue);
       }
 
-      h4 {
+      h3 {
         margin-bottom: 0.625rem;
         font-size: fs(medium);
         font-weight: $fw-bold;
         @include letter-spacing(1);
         color: clr(neutral, very-dark-blue);
+
+        a {
+          transition: color 300ms ease-in-out;
+
+          &:hover {
+            color: clr(primary, soft-red);
+          }
+        }
       }
 
       p {

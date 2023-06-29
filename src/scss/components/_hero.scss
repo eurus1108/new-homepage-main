@@ -14,6 +14,7 @@
       .content-container {
         display: flex;
         margin-top: 1.9375rem;
+        gap: calc(2rem - 2px);
 
         & > :is(h1, .division) {
           flex: 1;
@@ -22,7 +23,6 @@
     }
 
     h1 {
-      padding-right: calc(2rem - 2px);
       font-size: fs(3xlarge);
       font-weight: $fw-xbold;
       @include line-height(56);
